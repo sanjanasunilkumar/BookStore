@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4"><h2>Details</h2></div>
+        <div class="col-4"></div>
+    </div>
+    <div class="row pt-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>BOOKNAME</th>
+                    <th>AUTHOR</th>
+                    <th>PRICE</th>
+                </tr>
+                {%for book in book%}
+                <tr>
+                    <td>{{book.id}}</td>
+                    <td>{{book.bname}}</td>
+                    <td>{{book.aname}}</td>
+                    <td>{{book.price}}</td>                        
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+{%endblock%}
